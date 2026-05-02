@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anarose Sienes — Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* ── HOME PAGE STYLES ── */
+
+    #home {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 6rem;
+      position: relative;
+      max-width: 100%;
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3rem;
+    }
+    .hero-text { flex: 1; }
+
+    .hero-tag {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--accent);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.2s forwards;
+    }
+
+    .hero-name {
+      font-size: clamp(3.5rem, 9vw, 8rem);
+      font-weight: 800;
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.4s forwards;
+    }
+    .hero-name .line2 {
+      -webkit-text-stroke: 1.5px var(--text);
+      color: transparent;
+    }
+
+    .hero-desc {
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 480px;
+      line-height: 1.8;
+      margin-bottom: 3rem;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.6s forwards;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.8s forwards;
+    }
+
+    /* Photo */
+    .hero-photo-wrap {
+      position: relative;
+      flex-shrink: 0;
+      width: 340px;
+      opacity: 0;
+      animation: fadeUp 0.9s 0.6s forwards;
+    }
+    .hero-photo-wrap::before {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2), transparent);
+      z-index: 0;
+      opacity: 0.6;
+    }
+    .hero-photo-wrap::after {
+      content: '';
+      position: absolute;
+      bottom: -20px; right: -20px;
+      width: 100%; height: 100%;
+      border: 1.5px solid var(--border);
+      border-radius: 16px;
+      z-index: -1;
+    }
+    .hero-photo {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      border-radius: 14px;
+      display: block;
+      object-fit: cover;
+      object-position: top center;
+      max-height: 440px;
+      background: var(--surface);
+    }
+
+    /* Glow orb */
+    .hero-glow {
+      position: absolute;
+      top: 20%; right: 5%;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(0,245,160,0.06) 0%, transparent 70%);
+      pointer-events: none;
+      animation: pulse 6s ease-in-out infinite;
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner {
+        flex-direction: column-reverse;
+        text-align: center;
+        align-items: center;
+      }
+      .hero-photo-wrap { width: 220px; }
+      .hero-cta { justify-content: center; }
+      .hero-desc { margin: 0 auto 2rem; }
+    }
+    @media (max-width: 768px) {
+      .hero-inner { padding: 0 1.5rem; }
+      .hero-glow  { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">Anarose<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Experience</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div id="home">
+    <div class="hero-glow"></div>
+    <div class="hero-inner">
+
+      <!-- Text -->
+      <div class="hero-text">
+        <p class="hero-tag">&#9679; Available for work</p>
+        <h1 class="hero-name">
+          Anarose<br>
+          <span class="line2">Sienes</span>
+        </h1>
+        <p class="hero-desc">
+          A <strong style="color:var(--text)">Detail-oriented IT Graduate</strong> with hands-on experience in
+          Data Management, Graphic Design, and Customer Service. Based in Estancia, Iloilo 🇵🇭
+        </p>
+        <div class="hero-cta">
+          <a href="projects.html" class="btn btn-primary">View My Work</a>
+          <a href="contact.html" class="btn btn-ghost">Get In Touch</a>
+        </div>
+      </div>
+
+      <!-- Photo -->
+      <div class="hero-photo-wrap">
+        <img src="profile.png" alt="Anarose Sienes" class="hero-photo"/>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Designed &amp; Built by <strong style="color:var(--text)">Anarose Sienes</strong> &nbsp;·&nbsp; 2025 &nbsp;·&nbsp; Estancia, Iloilo 🇵🇭</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

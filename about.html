@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anarose Sienes — About</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* ── ABOUT PAGE STYLES ── */
+
+    .about-hero {
+      padding-top: 12rem;
+      padding-bottom: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .about-text p {
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.9;
+      margin-bottom: 1.2rem;
+    }
+    .about-text p strong { color: var(--text); }
+
+    /* Education card */
+    .edu-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem 2rem;
+      margin-top: 2rem;
+    }
+    .edu-card .edu-label {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--accent);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .edu-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+    .edu-card p {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    /* Skills */
+    .skills-label {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+
+    .skill-tag {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.6rem 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--muted);
+      transition: all 0.2s;
+    }
+    .skill-tag:hover { border-color: var(--accent); color: var(--accent); }
+
+    @media (max-width: 768px) {
+      .about-hero { padding: 8rem 1.5rem 2rem; }
+      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">Anarose<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Experience</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ABOUT HERO -->
+  <div class="about-hero">
+    <p class="section-label reveal">01 — About</p>
+    <h1 class="section-title reveal">A little about<br>who I am</h1>
+  </div>
+
+  <hr class="divider"/>
+
+  <!-- ABOUT CONTENT -->
+  <section>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>
+          Hi! I'm <strong>Anarose Sienes</strong>, a detail-oriented Information Technology Graduate
+          based in <strong>Estancia, Iloilo</strong>. I have hands-on experience in Data Management,
+          Insurance Policy Processing, Graphic Design, Pharmacy Support, and Customer Service.
+        </p>
+        <p>
+          I'm proficient in <strong>Salesforce</strong> and administrative portals for record
+          verification, data cleaning, and accurate documentation. I'm known for delivering organized,
+          efficient, and high-quality work in fast-paced environments.
+        </p>
+        <p>
+          Currently working as a <strong>Data Entry Specialist</strong> at Fair Trade Outsourcing,
+          and open to new opportunities where I can grow and contribute.
+        </p>
+
+        <!-- Education -->
+        <div class="edu-card">
+          <p class="edu-label">Education</p>
+          <h3>BS in Information Technology</h3>
+          <p>Northern Iloilo State University – Estancia, Iloilo</p>
+          <p style="margin-top:0.3rem; color: var(--accent);">2018 – 2022</p>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class="reveal">
+        <p class="skills-label">Data &amp; CRM Tools</p>
+        <div class="skills-grid">
+          <div class="skill-tag">Salesforce</div>
+          <div class="skill-tag">HubSpot CRM</div>
+          <div class="skill-tag">Get Covered Dashboard</div>
+          <div class="skill-tag">Real Estate DB</div>
+        </div>
+
+        <p class="skills-label">Productivity &amp; Collaboration</p>
+        <div class="skills-grid">
+          <div class="skill-tag">Microsoft Excel</div>
+          <div class="skill-tag">Microsoft Word</div>
+          <div class="skill-tag">Google Workspace</div>
+          <div class="skill-tag">Slack</div>
+        </div>
+
+        <p class="skills-label">Design &amp; Media</p>
+        <div class="skills-grid">
+          <div class="skill-tag">Canva</div>
+          <div class="skill-tag">Adobe Creative Suite</div>
+          <div class="skill-tag">Digital Editing Tools</div>
+          <div class="skill-tag">Graphic Design</div>
+        </div>
+
+        <p class="skills-label">IT &amp; E-Commerce</p>
+        <div class="skills-grid">
+          <div class="skill-tag">E-Commerce Mgmt</div>
+          <div class="skill-tag">Database Management</div>
+          <div class="skill-tag">Tech Troubleshooting</div>
+          <div class="skill-tag">Data Cleaning</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Designed &amp; Built by <strong style="color:var(--text)">Anarose Sienes</strong> &nbsp;·&nbsp; 2025 &nbsp;·&nbsp; Estancia, Iloilo 🇵🇭</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

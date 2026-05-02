@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anarose Sienes — Contact</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* ── CONTACT PAGE STYLES ── */
+
+    .page-hero {
+      padding-top: 12rem;
+      padding-bottom: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+
+    .contact-wrapper {
+      text-align: center;
+    }
+
+    .contact-sub {
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 3rem;
+      line-height: 1.8;
+    }
+
+    .contact-email {
+      display: inline-block;
+      font-size: clamp(1.2rem, 3vw, 2rem);
+      font-weight: 800;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 4px;
+      transition: color 0.2s;
+      margin-bottom: 1.5rem;
+    }
+    .contact-email:hover { color: var(--accent); }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 3rem;
+    }
+    .contact-details a,
+    .contact-details span {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .contact-details a:hover { color: var(--accent); }
+
+    .social-links {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    .social-links a {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+      border: 1px solid var(--border);
+      padding: 0.6rem 1.4rem;
+      border-radius: 4px;
+    }
+    .social-links a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    /* Glow */
+    .contact-glow {
+      position: fixed;
+      bottom: 10%; left: 50%;
+      transform: translateX(-50%);
+      width: 600px; height: 300px;
+      background: radial-gradient(ellipse, rgba(0,245,160,0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    @media (max-width: 768px) {
+      .page-hero { padding: 8rem 1.5rem 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="contact-glow"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">Anarose<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Experience</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <p class="section-label reveal">03 — Contact</p>
+    <h1 class="section-title reveal">Let's work<br>together</h1>
+  </div>
+
+  <hr class="divider"/>
+
+  <!-- CONTACT CONTENT -->
+  <section>
+    <div class="contact-wrapper">
+      <p class="contact-sub reveal">
+        I'm currently open to new opportunities and collaborations.<br>
+        Feel free to reach out — I'd love to connect!
+      </p>
+
+      <a href="mailto:anarosesienes2024@gmail.com" class="contact-email reveal">
+        anarosesienes2024@gmail.com
+      </a>
+
+      <div class="contact-details reveal">
+        <a href="tel:+639707882645">📞 +63 970 788 2645</a>
+        <span>📍 Estancia, Iloilo, Philippines</span>
+      </div>
+
+      <div class="social-links reveal">
+        <a href="https://www.linkedin.com/in/anarose-sienes-july261999" target="_blank">LinkedIn</a>
+        <a href="mailto:anarosesienes2024@gmail.com">Email Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Designed &amp; Built by <strong style="color:var(--text)">Anarose Sienes</strong> &nbsp;·&nbsp; 2025 &nbsp;·&nbsp; Estancia, Iloilo 🇵🇭</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

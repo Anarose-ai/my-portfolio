@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anarose Sienes — Experience</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* ── EXPERIENCE PAGE STYLES ── */
+
+    .page-hero {
+      padding-top: 12rem;
+      padding-bottom: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2rem;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s;
+    }
+    .project-card:hover {
+      border-color: rgba(0,245,160,0.2);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+    .project-card:hover::before { transform: scaleX(1); }
+
+    .project-num {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--accent);
+      letter-spacing: 0.15em;
+      margin-bottom: 1.2rem;
+    }
+    .project-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+    .project-desc {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+    }
+    .project-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .ptag {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 3px;
+      background: rgba(0,245,160,0.07);
+      color: var(--accent);
+      letter-spacing: 0.08em;
+    }
+
+    .cert-section { margin-top: 5rem; }
+
+    @media (max-width: 768px) {
+      .page-hero { padding: 8rem 1.5rem 2rem; }
+      .projects-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">Anarose<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Experience</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <p class="section-label reveal">02 — Experience</p>
+    <h1 class="section-title reveal">Work Experience<br>&amp; Certifications</h1>
+  </div>
+
+  <hr class="divider"/>
+
+  <!-- WORK EXPERIENCE -->
+  <section>
+    <p class="section-label reveal">Work Experience</p>
+    <div class="projects-grid">
+
+      <div class="project-card reveal">
+        <p class="project-num">Experience 01 · Jan 2025 – Present</p>
+        <h3 class="project-title">Data Entry Specialist</h3>
+        <p class="project-desc">
+          Fair Trade Outsourcing — Managed and maintained insurance records using the Get Covered Dashboard.
+          Performed data cleaning and validation, correcting incomplete entries, resolving inconsistencies,
+          and removing duplicate records. Ensured consistency and reliability of data for reporting purposes.
+        </p>
+        <div class="project-tags">
+          <span class="ptag">Salesforce</span>
+          <span class="ptag">Data Cleaning</span>
+          <span class="ptag">Get Covered Dashboard</span>
+          <span class="ptag">Data Validation</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <p class="project-num">Experience 02 · Dec 2022 – Oct 2024</p>
+        <h3 class="project-title">Pharmacy Assistant</h3>
+        <p class="project-desc">
+          DMG Pharmacy — Supported customers with product inquiries and managed inventory ensuring
+          accurate product labeling. Strengthened customer service skills through active listening
+          and clear communication in a fast-paced retail environment.
+        </p>
+        <div class="project-tags">
+          <span class="ptag">Inventory Management</span>
+          <span class="ptag">Customer Service</span>
+          <span class="ptag">Communication</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <p class="project-num">Experience 03 · Jul 2022 – Oct 2022</p>
+        <h3 class="project-title">Graphic Designer</h3>
+        <p class="project-desc">
+          Chan &amp; Chel Sportswear (Part-time) — Designed layouts and visuals for sportswear,
+          customizing based on client needs. Collaborated closely with the team to maintain brand
+          consistency and meet project deadlines. Adapted designs based on client feedback.
+        </p>
+        <div class="project-tags">
+          <span class="ptag">Canva</span>
+          <span class="ptag">Adobe Creative Suite</span>
+          <span class="ptag">Brand Design</span>
+          <span class="ptag">Client Relations</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CERTIFICATIONS -->
+    <div class="cert-section">
+      <p class="section-label reveal">Certifications</p>
+      <div class="projects-grid">
+
+        <div class="project-card reveal">
+          <p class="project-num">Coursera · Dec 2024</p>
+          <h3 class="project-title">Foundations: Data, Data Everywhere</h3>
+          <p class="project-desc">
+            Google Data Analytics certification covering data fundamentals, spreadsheets,
+            SQL, and data visualization basics. Part of the Google Data Analytics Professional Certificate.
+          </p>
+          <div class="project-tags">
+            <span class="ptag">Data Analytics</span>
+            <span class="ptag">Google</span>
+            <span class="ptag">SQL</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <p class="project-num">Coursera · Oct 2024</p>
+          <h3 class="project-title">Cybersecurity for Business</h3>
+          <p class="project-desc">
+            Covered cybersecurity fundamentals, risk management, and best practices for
+            protecting business data and systems from threats and vulnerabilities.
+          </p>
+          <div class="project-tags">
+            <span class="ptag">Cybersecurity</span>
+            <span class="ptag">Risk Management</span>
+            <span class="ptag">Data Security</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <p class="project-num">MSME DICT · Dec 2023</p>
+          <h3 class="project-title">E-Commerce Certification</h3>
+          <p class="project-desc">
+            Certified in e-commerce platform management, digital selling strategies, and online
+            business operations under DICT Philippines — a government-backed digital skills program.
+          </p>
+          <div class="project-tags">
+            <span class="ptag">E-Commerce</span>
+            <span class="ptag">DICT PH</span>
+            <span class="ptag">Digital Business</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Designed &amp; Built by <strong style="color:var(--text)">Anarose Sienes</strong> &nbsp;·&nbsp; 2025 &nbsp;·&nbsp; Estancia, Iloilo 🇵🇭</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
